@@ -7,6 +7,6 @@ public class Constants {
 	public static final int FRAME_WIDTH = 800;
 	public static final int FRAME_HEIGHT = 600;
 	public static final int IMAGE_LABEL_BORDER = 30;
-	public static final String CASCADE_CLASSIFIER = "";
+	public static final String CASCADE_CLASSIFIER = "C:\\test\\haarcascade_frontalface_alt.xml";
 
 }

@@ -62,7 +62,8 @@ public class MainFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(fileChooser.showOpenDialog(MainFrame.this) == JFileChooser.APPROVE_OPTION) {
 					MainFrame.this.file = fileChooser.getSelectedFile();
-					// load the image
+					System.out.println(MainFrame.this.file);
+					MainFrame.this.imagePanel.loadImage(MainFrame.this.file);					
 				}
 			}
 		});
@@ -70,9 +71,9 @@ public class MainFrame extends JFrame {
 		detectMenuItem.addActionListener(new ActionListener() {
 			
 			@Override
-			public void actionPerformed(ActionEvent e) {
-				// call logic
-				
+			public void actionPerformed(ActionEvent e) {				
+				MainFrame.this.faceDetection.detectFaces(MainFrame.this.file, 
+						MainFrame.this.imagePanel);
 			}
 		});
 		
