@@ -4,13 +4,15 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import com.jclab.facedetection.gui.MainFrame;
+
 public class App {
 
 	public static void main(String[] args) {
 	
 		try {
 			
-			UIManager.setLookAndFeel("world");
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 			
 		} catch (ClassNotFoundException | InstantiationException
 				| IllegalAccessException | UnsupportedLookAndFeelException e) {
@@ -20,9 +22,8 @@ public class App {
 		SwingUtilities.invokeLater(new Runnable() {
 			
 			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				
+			public void run() {				
+				new MainFrame();
 			}
 		});
 		
